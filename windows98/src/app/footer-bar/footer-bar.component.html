@@ -1,0 +1,48 @@
+
+<footer>
+    <button mat-button [matMenuTriggerFor]="menu" class="footerBar-btn">
+        <div class="button-content">
+            <img src="../../assets/icons/windows_smallIcon.svg" alt="" class="start-icon">
+            <span class="start-text">Start</span>
+        </div>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <img src="../../assets/icons/icon_programs.png" alt="">
+            <p>Programs</p>
+        </button>
+        <button mat-menu-item>
+            <img src="../../assets/icons/icon_documents.png" alt="">
+            <p>Documents</p>
+        </button>
+        <button mat-menu-item>
+            <img src="../../assets/icons/icon_settings.png" alt="">
+            <p>Settings</p>
+        </button>
+        <button mat-menu-item>
+            <img src="../../assets/icons/icon_find.png" alt="">
+            <p>Find</p>
+        </button>
+        <button mat-menu-item>
+            <img src="../../assets/icons/icon_programs.png" alt="">
+            <p>Help</p>
+        </button>
+        <button mat-menu-item>
+            <img src="../../assets/icons/icons_help.png" alt="">
+            <p>Run</p>
+        </button>
+        <hr>
+        <button mat-menu-item>
+            <img src="../../assets/icons/icon_shut.png" alt="">
+            <p>Shut Down</p>
+        </button>
+    </mat-menu>
+      
+
+    <button class="footerClock-btn lright">
+        <img src="../../assets/icons/icon_sound.svg" alt="">
+        <div id="clock">{{ timeString }}</div>
+    </button>
+</footer>
+

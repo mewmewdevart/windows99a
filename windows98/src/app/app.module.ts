@@ -4,26 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './footer/footer.component';
-import { SectionComponent } from './section/section.component';
-import { WindowComponent } from './window/window.component';
+import { FooterBarComponent } from './footer-bar/footer-bar.component';
 
-import {NgFor} from '@angular/common';
-import {MatGridListModule} from '@angular/material/grid-list';
+// Material UI
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import { DesktopComponent } from './desktop/desktop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    SectionComponent,
-    WindowComponent
+    FooterBarComponent,
+    DesktopComponent
   ],
   imports: [
-    NgFor,
-    MatGridListModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

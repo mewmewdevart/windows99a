@@ -1,0 +1,87 @@
+@import '../../styles'
+
+footer
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background-color: $color_mono100
+	height: 68px
+	position: fixed
+	left: 0
+	bottom: 0
+	width: 100%
+	box-shadow: 2px 2px 0px 0px #F0F0F0 inset
+	.footerBar-btn
+		border-radius: 0
+		background-color: $color_mono100
+		border: 0 2px 2px 0 solid #262626
+		box-shadow: 4px 4px 0px 0px #B1B1B1 inset, -4px -4px 0px 0px #7E7E7E inset, 2px 2px 0px 0px #F0F0F0 inset, -2px -2px 0px 0px #262626 inset
+		display: flex
+		width: 120px
+		height: 50px
+		padding: 9px 22px 9px 8px
+		align-items: center
+		margin-left: 8px
+		font-size: 26px
+		&:hover
+			background-color: $color_mono50
+			border: 0 2px 2px 0 solid $color_mono50
+			box-shadow: -4px -4px 0px 0px #B1B1B1 inset, 4px 4px 0px 0px #7E7E7E inset, -2px -2px 0px 0px #F0F0F0 inset, 2px 2px 0px 0px #262626 inset
+		.button-content
+			display: flex
+			align-items: center
+			gap: 7px
+			padding-left: 10px
+	.footerClock-btn
+		background-color: $color_mono100
+		margin-right: 8px
+		display: flex
+		padding: 7px
+		justify-content: flex-end
+		align-items: center
+		gap: 10px
+		border: none
+		box-shadow: 2px 2px 0px 0px #7E7E7E inset, -2px -2px 0px 0px #F0F0F0 inset
+		img
+			width: 32px
+			height: 32px
+			justify-content: center
+			align-items: center
+		div
+			font-size: 24px
+
+.mat-mdc-menu-item
+	background-color: $color_mono100
+	display: flex
+	align-items: center
+	border: none
+	border-radius: 0
+	width: 250px
+	margin: 0 !important
+	padding: 5px 5px 0px 5px
+	list-style-type: none
+	box-shadow: none
+	&:hover
+		background-color: $color_blue100
+		p
+			color: $color_mono_white
+	&:focus
+		outline: none
+		font-family: $font_principal
+	img
+		display: inline-block
+		width: 56px
+		height: 56px
+	hr
+		height: 2px
+		background: var(--mono-300, #8E8E8E)
+	p
+		display: inline-block
+		position: absolute
+		padding-top: 20px
+		padding-left: 14px
+		font-size: 22px
+		font-family: $font_principal
+
+mat-mdc-menu-panel
+	background-color: red
