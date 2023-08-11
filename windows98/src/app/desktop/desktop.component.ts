@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class DesktopComponent {
 
+  openHeaderWindow() {
+    const headerWindow = document.querySelector('.window') as HTMLElement;
+    headerWindow.style.display = 'block';
+  }
+
+  closingHeaderWindow() {
+    const headerWindow = document.querySelector('.window') as HTMLElement;
+    headerWindow.style.display = 'none';
+  }
 }

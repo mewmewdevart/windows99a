@@ -1,1 +1,53 @@
-<p>desktop works!</p>
+<section>
+	<div class="container">
+		<div class="icon-desktop">
+			<button (click)="openHeaderWindow()">
+				<img src="../../assets/icons/icon_readme.png" alt="">
+				<p>README</p>
+			</button>
+		</div>
+		<div class="window">
+			<div class="header-window">
+				<div class="op-text">
+					<img src="../../assets/icons/icon_readme.png" alt="">
+					<p>Larissa Cristina - Microsoft Internet Explorer</p>
+				</div>
+				<div class="options-btn">
+					<button class="down">
+						<img src="../../assets/icons/icon_i.png" alt="">
+					</button>
+					<button class="block">
+						<img src="../../assets/icons/icon_op.png" alt="">
+					</button>
+					<button (click)="closingHeaderWindow()">
+						<img src="../../assets/icons/icon_x.png" alt="">
+					</button>
+				</div>
+			</div>
+			<div class="header-window-edit">
+				<div class="edit-op">
+					<ul>
+						<li>File</li>
+						<li>Edit</li>
+						<li>View</li>
+						<li>Favorites</li>
+						<li>Tools</li>
+						<li>Help</li>
+					</ul>
+				</div>
+			</div>
+			<hr class="line">
+			<div class="header-search-op">
+				<p>Address</p>
+				<div class="search">
+					<p>https//larissa.com.br</p>
+				</div>
+			</div>
+			<hr class="line">
+			<div class="container-content">
+			</div>
+		</div>
+		<div class="just-space">
+		</div>
+	</div>
+</section>
