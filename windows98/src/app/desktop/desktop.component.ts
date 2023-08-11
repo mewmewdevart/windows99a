@@ -1,4 +1,6 @@
+// desktop.component.ts
 import { Component } from '@angular/core';
+import { CommunicationService } from '../communication.service';
 
 @Component({
   selector: 'app-desktop',
@@ -6,14 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./desktop.component.sass']
 })
 export class DesktopComponent {
+  headerWindowVisible = false;
 
-  openHeaderWindow() {
-    const headerWindow = document.querySelector('.window') as HTMLElement;
-    headerWindow.style.display = 'block';
-  }
+  constructor(private communicationService: CommunicationService) {}
 
-  closingHeaderWindow() {
+  // 🚨 MAKE IT BETTER: 
+  toggleHideWindow(){
     const headerWindow = document.querySelector('.window') as HTMLElement;
     headerWindow.style.display = 'none';
+  }
+
+  toggleHeaderWindow(){
+    this.headerWindowVisible = !this.headerWindowVisible;
+    this.communicationService.updateFooterWindowStatus(this.headerWindowVisible);
   }
 }

@@ -1,25 +1,25 @@
 <section>
 	<div class="container">
 		<div class="icon-desktop">
-			<button (click)="openHeaderWindow()">
+			<button (click)="toggleHeaderWindow()">
 				<img src="../../assets/icons/icon_readme.png" alt="">
 				<p>README</p>
 			</button>
 		</div>
-		<div class="window">
+		<div class="window" [style.display]="headerWindowVisible ? 'block' : 'none'">
 			<div class="header-window">
 				<div class="op-text">
 					<img src="../../assets/icons/icon_readme.png" alt="">
 					<p>Larissa Cristina - Microsoft Internet Explorer</p>
 				</div>
 				<div class="options-btn">
-					<button class="down">
+					<button (click)="toggleHideWindow()">
 						<img src="../../assets/icons/icon_i.png" alt="">
 					</button>
 					<button class="block">
 						<img src="../../assets/icons/icon_op.png" alt="">
 					</button>
-					<button (click)="closingHeaderWindow()">
+					<button (click)="toggleHeaderWindow()">
 						<img src="../../assets/icons/icon_x.png" alt="">
 					</button>
 				</div>
