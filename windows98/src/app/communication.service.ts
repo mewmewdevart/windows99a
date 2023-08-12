@@ -1,17 +1,23 @@
-// service element to have one "conversation" between different parts of the application (footer and desktop componts in this case)
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs'; // Subject to manage the status
+import { Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root', // Use the root as a reference
+  providedIn: 'root',
 })
-
 export class CommunicationService {
-  private footerWindowStatusSubject = new Subject<boolean>(); // Manages the footer-window of the status
-  footerWindowStatus$ = this.footerWindowStatusSubject.asObservable(); // Observable for checking if everthing is ok
+  private footerWindowStatusSubject = new Subject<boolean>();
+  footerWindowStatus$ = this.footerWindowStatusSubject.asObservable();
+  //public clickCount: number = 0;
 
-  // Function to update the windows status
   updateFooterWindowStatus(status: boolean) {
-    this.footerWindowStatusSubject.next(status); // Notificate the asObservable()
+    this.footerWindowStatusSubject.next(status);
   }
+
+  /* Option to export/import the clickCount of desktop to footer interactions
+  setClickCount(count: number) {
+    this.clickCount = count;
+  }
+  getClickCount(): number {
+    return this.clickCount;
+  } */
 }
