@@ -7,13 +7,13 @@
 					<p>Microsoft Internet Explorer</p>
 				</div>
 				<div class="option-buttons">
-					<button>
+					<button (click)="minimizeWindow()">
 						<img src="../../assets/icons/icon_i.png" alt="">
 					</button>
 					<button class="block">
 						<img src="../../assets/icons/icon_op.png" alt="">
 					</button>
-					<button>
+					<button (click)="closeWindow()">
 						<img src="../../assets/icons/icon_x.png" alt="">
 					</button>
 				</div>
@@ -39,7 +39,14 @@
 			</div>
 			<div class="divider-no-hr"></div>
 			<div class="content-container-inner">
-				<!-- Content -->
+				<div class="container">
+					<header>
+						<img src="../../assets/welcome.gif" alt="">
+					</header>
+					<div class="content">
+						<p>Hello, Web Surfer, and welcome to my Windows page. As you may already know, my name is Larissa, and I am 23 years old, from São Paulo, Brazil. <br> <br>The design of this page was created inspired by Windows 98, developed for the Front-End Framework I (Angular) module of the Start &lt;Tech&gt; Program – an initiative by Universidade TOTVS in partnership with Ada Tech and Instituto da Oportunidade Social.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -25,4 +25,13 @@ export class WindowComponent implements OnDestroy {
     this.windowVisible = !this.windowVisible;
     this.communicationService.setWindowVisibility(this.windowVisible); // When it is visible, send the information
   }
+
+  minimizeWindow() {
+    this.windowVisible = false;
+  }
+
+  closeWindow() {  // Hide the window and send the information to the task-bar window
+    this.windowVisible = false;
+    this.communicationService.setWindowVisibility(false);
+  }
 }
