@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CommunicationService {
-  private footerWindowStatusSubject = new Subject<boolean>();
-  footerWindowStatus$ = this.footerWindowStatusSubject.asObservable();
-  //public clickCount: number = 0;
+  private toggleWindowSubject = new Subject<void>(); // Active the window
+  private windowVisibilitySubject = new Subject<boolean>(); // Active the bar-task
 
-  updateFooterWindowStatus(status: boolean) {
-    this.footerWindowStatusSubject.next(status);
+  toggleWindow$: Observable<void> = this.toggleWindowSubject.asObservable();
+  windowVisibility$: Observable<boolean> = this.windowVisibilitySubject.asObservable();
+
+  toggleWindow() { // Just a toggle function of the button in the icon.component to see it has been clicked
+    this.toggleWindowSubject.next();
   }
 
-  /* Option to export/import the clickCount of desktop to footer interactions
-  setClickCount(count: number) {
-    this.clickCount = count;
+  setWindowVisibility(visible: boolean) {
+    this.windowVisibilitySubject.next(visible);
   }
-  getClickCount(): number {
-    return this.clickCount;
-  } */
 }

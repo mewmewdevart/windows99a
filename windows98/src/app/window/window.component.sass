@@ -1,0 +1,98 @@
+@import '../../styles'
+
+// Reset the ng-ul styles
+::ng-deep ul
+	margin: 0
+	padding: 0
+	
+.main-section
+	.content-container
+		padding-top: 2%
+	.window
+		display: none
+		background-color: $color_mono100
+		margin-top: 30px
+		width: 82vw
+		min-height: 75vh
+		z-index: 1000 
+		box-shadow: -4px -4px 0px 0px #7E7E7E inset 2px 2px 0px 0px #F0F0F0 inset -2px -2px 0px 0px #262626 inset
+		@media (max-width: 768px)
+			width: 100% 
+			max-width: none
+			min-height: 40vh
+		.window-header
+			display: flex
+			background-color: $color_blue100
+			width: 100%
+			margin-left: 0
+			padding: 5px  0px
+			height: 42px
+			justify-content: space-between
+			.option-text
+				display: flex
+				align-items: center
+				img
+					display: inline-block
+					width: 32px
+					height: 32px
+					padding-left: 4px
+				p
+					display: inline-block
+					color: $color_mono_white
+					font-size: $font_sizeSmall
+					padding-top: 10px
+					padding-left: 8px
+					font-family: $font_principal
+		.option-buttons
+			button
+				background-color: transparent
+				border: none
+				cursor: pointer
+				padding-left: 1px
+		.window-header-edit
+			background-color: $color_mono100
+			width: 100%
+			height: 22px
+			.edit-options
+				padding-top: 11px
+				ul
+					padding-left: 10px
+					display: flex
+					gap: 22px
+					li
+						display: inline-block
+						font-size: $font_sizeSmall
+						font-family: $font_principal
+		.divider-no-hr
+			background: var(--mono-300, #8E8E8E)
+			margin-top: 15px
+			margin-bottom: 15px
+			width: 100%
+			height: 2px
+		.header-search-option
+			display: flex
+			width: 100%
+			height: 25px
+			gap: 15px
+			.search-bar
+				width: 92%
+				padding-left: 15px
+				padding-top: 3px
+				height: 25px
+				background-color: $color_mono_white
+				p
+					font-size: $font_sizeSmall
+					font-family: $font_principal
+			h3
+				font-size: $font_sizeSmall
+				font-family: $font_principal
+				padding-left: 10px
+		.content-container-inner
+			display: flex
+			width: 100%
+			height: 100%
+			overflow: scroll
+			background-color: $color_mono_white
+
+
+	

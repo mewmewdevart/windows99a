@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="blue-screen">
+      <h1>WINDOWS98</h1>
+      <p>
+        A fatal exception 0E has occurred at 0028:C0034CA8 in VXD VMM(01) + 00003CA8. The current application will be
+        terminated. <br /><br />
+        * Press any key to terminate the current application. <br />
+        * Press CTRL+ALT+DEL again to restart your computer. You will lose any unsaved information in all applications.
+        <br /><br />
+      </p>
+      <h6>Embrace the chaos to continue or just press F5 _</h6>
+    </div>
+    <div class="login-screen">
+      <div class="win-log">
+        <header>
+          <p>Welcome to Windows98</p>
+          <img src="../../assets/icons/icon_x.png" alt="" />
+        </header>
+        <div class="content row">
+			<!-- 
+          <div class="col-md-6 info-content">
+            <img src="../../assets/icons/icon_win.png" alt="" />
+          </div> -->
+		  <div class="col-md-12">
+			<form (ngSubmit)="submitForm()">
+				<p>Type a username and password to log on to Windows.</p>
+				<p>Insert your username</p>
+				<mat-form-field>
+					<input matInput placeholder="admin" [formControl]="username" required />
+					<mat-error>{{ getErrorMessage(username) }}</mat-error>
+				</mat-form-field>
+				<p>Insert your password</p>
+				<mat-form-field>
+					<input matInput placeholder="123" [formControl]="password" required />
+					<mat-error>{{ getErrorMessage(password) }}</mat-error>
+				</mat-form-field>
+				<button type="submit">OK</button>
+			</form>
+		 </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

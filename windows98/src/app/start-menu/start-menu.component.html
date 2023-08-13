@@ -7,14 +7,14 @@
 			</div>
 		</button>
 	
-			<div class="footer-bar">
-				<button class="footerBar-window" [style.display]="windowFooterVisible ? 'flex' : 'none'" (click)="showWindowAgain()">
-				<div class="button-content">
-					<img src="../../assets/icons/icon_readme.png" alt="">
-					<p>Internet Explorer</p>
-				</div>
-				</button>
-			</div>
+		<div class="footer-bar left-position-bar" *ngIf="taskBarVisible">
+			<button class="taskBar-window" *ngFor="let option of taskBarOptions.slice(0, 3)" [ngStyle]="{ display: taskBarVisible ? 'flex' : 'none' }"> 
+			  <div class="button-content">
+				<img [src]="option.photo" alt="{{option.alt}}">
+				<p>{{ option.title }}</p>
+			  </div>
+			</button>
+		</div>					  
 	</div>
 
 	<!-- continued part of mat-button ^ -->

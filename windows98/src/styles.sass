@@ -1,18 +1,18 @@
-@import 'app/css-reset'
+@import './app/css-reset'
 
 @font-face 
-  font-family: 'w95fa'
-  src: url('./assets/fonts/W95FA/w95fa.woff') format('woff')
+	font-family: 'w95fa'
+	src: url('./assets/fonts/W95FA/w95fa.woff') format('woff')
 
 @font-face
-  font-family: 'w95fa'
-  src: url('./assets/fonts/W95FA/w95fa.woff2') format('woff2')
+	font-family: 'w95fa'
+	src: url('./assets/fonts/W95FA/w95fa.woff2') format('woff2')
 
 @font-face 
-  font-family: 'W95FA'
-  src: url('./assets/fonts/W95FA/W95FA.otf') format('opentype')
+	font-family: 'W95FA'
+	src: url('./assets/fonts/W95FA/W95FA.otf') format('opentype')
 
-  
+	
 $color_brandGreen: #008282
 $color_brandGray: #C3C3C3
 
@@ -32,8 +32,20 @@ $color_green100: #26B50F
 
 
 $font_principal: 'w95fa', sans-serif
+$font_sizeSmall: 18px
+$font_sizeMedium: 22px
+$font_sizeBigger: 24px
 
-body
-    background: $color_brandGreen 
+
+// Trying aplicate the global style of font
+body, app-root
+	font-family: $font_principal !important
 *
-    font-family: $font_principal
+	font-family: $font_principal
+
+::ng-deep .mat-typography
+	font-family: $font_principal !important
+
+.global-text
+	font-size: $font_sizeMedium
+	color: $color_mono_black

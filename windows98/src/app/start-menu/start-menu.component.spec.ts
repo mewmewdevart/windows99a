@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterBarComponent } from './footer-bar.component';
+import { StartMenuComponent } from './start-menu.component';
 
-describe('FooterBarComponent', () => {
-  let component: FooterBarComponent;
-  let fixture: ComponentFixture<FooterBarComponent>;
+describe('StartMenuComponent', () => {
+  let component: StartMenuComponent;
+  let fixture: ComponentFixture<StartMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterBarComponent ]
+      declarations: [ StartMenuComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FooterBarComponent);
+    fixture = TestBed.createComponent(StartMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
