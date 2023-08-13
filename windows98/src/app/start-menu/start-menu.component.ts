@@ -75,6 +75,9 @@ export class StartMenuComponent {
 		showContainerScreen.style.display = 'flex';
     showContainerScreen.style.backgroundColor = '#000EA3';
 
+    const showWinScreen = document.querySelector('.window') as HTMLElement; // if the window is open, it will close it
+		showWinScreen.style.display = 'none';
+
     const noShowWinLog = document.querySelector('.win-log') as HTMLElement;
 		noShowWinLog.style.display = 'none';
 
