@@ -81,7 +81,7 @@ http://localhost:4200
 - Bootstrap
 - SASS
 - Material UI
-- [VS CODE](https://code.visualstudio.com/) | Meu ambiente de desenvolvimento integrado para escrever, ler e executar código Java com mais eficiência.
+- [VS CODE](https://code.visualstudio.com/) | Meu ambiente de desenvolvimento integrado para escrever, ler e executar código com mais eficiência.
 
 ## 🔗 Referencias
 - [Markdown](https://www.markdownguide.org/basic-syntax/) | Documentação de como utilizar o Markdown.
