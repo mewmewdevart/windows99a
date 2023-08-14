@@ -7,7 +7,7 @@ import { StartMenuComponent } from './start-menu/start-menu.component';
 const routes: Routes = [
   { path: '', component: DesktopComponent }, // Route main
   { path: 'window', component: WindowComponent },
-  { path: 'start-menu', component: StartMenuComponent}
+  { path: 'start-menu', component: StartMenuComponent} // 
 ];
 
 @NgModule({
