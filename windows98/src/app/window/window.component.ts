@@ -78,4 +78,56 @@ export class WindowComponent implements OnDestroy, AfterViewInit {
       elmnt.onmousedown = dragMouseDown;
     }
   }
+
+toggleFavorite(index: number): void {
+    this.movies[index].favorite = !this.movies[index].favorite;
+}
+
+movies: Array<any> = [
+  {
+    id: 1,
+    title: 'Street Trash',
+    photo: '../../assets/banner_1.png',
+    alt: 'street trash image',
+    price: 20,
+    favorite: false,
+    duration: 105, 
+    genre: 'Horror',
+    director: 'James M. Muro',
+    synopsis: "Amid the grimy streets of New York City, a case of tainted liquor turns homeless people into melting mutants. Chaos ensues as the liquid spreads, leading to a battle for survival in this gory cult classic.",
+    mediaRating: 2.8,
+  },
+  {
+    id: 2,
+    title: 'In the Dark',
+    photo: '../../assets/banner_2.png',
+    alt: 'In the Dark image',
+    price: 50,
+    favorite: false,
+    duration: 120, 
+    genre: 'Thriller',
+    director: 'David Spade',
+    synopsis: "A suspenseful tale of a detective chasing a serial killer who leaves cryptic clues at crime scenes. As the stakes rise, the detective becomes entangled in a psychological battle with the killer.",
+    mediaRating: 3.5,
+  },
+  {
+    id: 3,
+    title: 'Troll 2',
+    photo: '../../assets/banner_3.png',
+    alt: 'Troll 2 image',
+    price: 50,
+    favorite: false,
+    duration: 95,
+    genre: 'Fantasy',
+    director: 'Claudio Fragasso',
+    synopsis: "A family vacation turns bizarre when they encounter a town populated by vegetarian goblins who want to turn them into plants. This unintentionally hilarious movie has gained a cult following.",
+    mediaRating: 3.9,
+  }
+];
+
+selectedMovie: any;
+
+viewDetails(movieId: number) {
+  this.selectedMovie = this.movies.find(movie => movie.id === movieId);
+}
 }

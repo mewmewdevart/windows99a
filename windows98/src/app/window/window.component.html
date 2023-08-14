@@ -1,53 +1,149 @@
 <section class="main-section">
 	<div class="content-container">
-		<div id="draggagleWindow" class="window container-fluid p-0 m-0" [style.display]="windowVisible ? 'block' : 'none'">
-			<div class="window-header">
-				<div class="option-text">
-					<img src="../../assets/icons/icon_readme.png" alt="">
-					<p>Microsoft Internet Explorer</p>
-				</div>
-				<div class="option-buttons">
-					<button (click)="minimizeWindow()">
-						<img src="../../assets/icons/icon_i.png" alt="">
-					</button>
-					<button class="block">
-						<img src="../../assets/icons/icon_op.png" alt="">
-					</button>
-					<button (click)="closeWindow()">
-						<img src="../../assets/icons/icon_x.png" alt="">
-					</button>
-				</div>
-			</div>
-			<div class="window-header-edit">
-				<div class="edit-options">
-					<ul>
-						<li>File</li>
-						<li>Edit</li>
-						<li>View</li>
-						<li>Favorites</li>
-						<li>Tools</li>
-						<li>Help</li>
-					</ul>
-				</div>
-			</div>
-			<div class="divider-no-hr"></div>
-			<div class="header-search-option">
-				<h3>Address</h3>
-				<div class="search-bar">
-					<p>https://larissa.com.br</p>
-				</div>
-			</div>
-			<div class="divider-no-hr"></div>
-			<div class="content-container-inner">
-				<div class="container">
-					<header>
-						<img src="../../assets/welcome.gif" alt="">
-					</header>
-					<div class="content">
-						<p>Hello, Web Surfer, and welcome to my Windows page. As you may already know, my name is Larissa, and I am 23 years old, from São Paulo, Brazil. <br> <br>The design of this page was created inspired by Windows 98, developed for the Front-End Framework I (Angular) module of the Start &lt;Tech&gt; Program – an initiative by Universidade TOTVS in partnership with Ada Tech and Instituto da Oportunidade Social.</p>
-					</div>
-				</div>
-			</div>
+	  <div id="draggagleWindow" class="window container-fluid p-0 m-0" [style.display]="windowVisible ? 'block' : 'none'">
+		<div class="window-header">
+		  <div class="option-text">
+			<img src="../../assets/icons/icon_readme.png" alt="">
+			<p>Microsoft Internet Explorer</p>
+		  </div>
+		  <div class="option-buttons">
+			<button (click)="minimizeWindow()">
+			  <img src="../../assets/icons/icon_i.png" alt="">
+			</button>
+			<button class="block">
+			  <img src="../../assets/icons/icon_op.png" alt="">
+			</button>
+			<button (click)="closeWindow()">
+			  <img src="../../assets/icons/icon_x.png" alt="">
+			</button>
+		  </div>
 		</div>
-	</div>
-</section>
+		<div class="window-header-edit">
+		  <div class="edit-options">
+			<ul>
+			  <li>File</li>
+			  <li>Edit</li>
+			  <li>View</li>
+			  <li>Favorites</li>
+			  <li>Tools</li>
+			  <li>Help</li>
+			</ul>
+		  </div>
+		</div>
+		<div class="divider-no-hr"></div>
+		<div class="header-search-option">
+		  <h3>Address</h3>
+		  <div class="search-bar">
+			<p>https://larissa.net/rentalMovies</p>
+		  </div>
+		</div>
+		<div class="divider-no-hr"></div>
+		<div class="content-container-inner">
+		  <div class="container">
+			<img src="https://i.imgur.com/i6hvJjx.gif" class="header-image">
+			<header>
+			  <h1 class="tab blink">Welcome to Larissa's Rental Movies!</h1>
+			</header>
+			<div class="content">
+			  <p>
+				🎬 Ladies and gentlemen, movie buffs, and seekers of the extraordinary, welcome to a place where memories come alive,
+				where flickering screens tell tales of eras gone by, where nostalgia reigns supreme. Introducing our pride and joy:
+				<strong>Larissa's Rental Movies</strong> – Your Ultimate Retro Movie Haven!
+			  </p>
+			  <section id="favorite-movies">
+				<h2>Check out your favorite movies:</h2>
+				<ng-container *ngIf="movies.length > 0; else noFavorites"> <!-- Check if have or not the favorite movie -->
+				  <mat-grid-list cols="3" rowHeight="3:4">
+					<div *ngFor="let movie of movies; let i = index">
+					  <mat-grid-tile *ngIf="movie.favorite">
+						<mat-card>
+						  <img mat-card-image [src]="movie.photo" [alt]="movie.title" />
+						  <mat-card-content>
+							<h3>{{ movie.title }}</h3>
+							<ul>
+							  <li>Genre: {{ movie.genre }}</li>
+							  <li>Director: {{ movie.director }}</li>
+							  <li>Duration: {{ movie.duration }} min</li>
+							  <li>Price: {{ movie.price | currency }}</li>
+							</ul>
+						  </mat-card-content>
+						  <mat-card-actions>
+							<button
+							  [class]="movie.favorite === false ? 'favorite' : 'favorite-checked'"
+							  [title]="movie.favorite === false ? 'Add to Favorites' : 'Remove from Favorites'"
+							  mat-button
+							  (click)="toggleFavorite(i)">
+							  <span aria-hidden="false" aria-label="Favorites" class="heart-icon">&hearts;</span>
+							</button>
+							<button mat-button (click)="viewDetails(movie.id)">View Details</button>
+						  </mat-card-actions>
+						</mat-card>
+					  </mat-grid-tile>
+					</div>
+				  </mat-grid-list>
+				</ng-container>
+
+				<ng-template #noFavorites class="alertNoFav">
+				  <p>You have no favorite movies.</p>
+				</ng-template>
+			
+			  </section>
+  
+			  <section id="all-movies">
+				<h2>All movies:</h2>
+				<mat-grid-list cols="3" rowHeight="3:4">
+				  <mat-grid-tile *ngFor="let movie of movies; let i = index">
+					<mat-card>
+					  <img mat-card-image [src]="movie.photo" [alt]="movie.title" />
+					  <mat-card-content>
+						<h3>{{ movie.title }}</h3>
+						<ul>
+						  <li>Genre: {{ movie.genre }}</li>
+						  <li>Director: {{ movie.director }}</li>
+						  <li>Duration: {{ movie.duration }} min</li>
+						  <li>Price: {{ movie.price | currency }}</li>
+						</ul>
+					  </mat-card-content>
+					  <mat-card-actions>
+							<button
+							[class]="movie.favorite === false ? 'favorite' : 'favorite-checked'"
+							[title]="movie.favorite === false ? 'Add to Favorites' : 'Remove from Favorites'"
+							mat-button
+							(click)="toggleFavorite(i)">
+							<span aria-hidden="false" aria-label="Favorites" class="heart-icon">&hearts;</span>
+						</button>										
+						<button mat-button (click)="viewDetails(movie.id)">View Details</button>
+					  </mat-card-actions>
+					</mat-card>
+				  </mat-grid-tile>
+				</mat-grid-list>
+			  </section>
+
+
+			  <section id="movieClicked" [style.display]="selectedMovie ? 'flex' : 'none'">
+				<div class="movie-details-container">
+				  <img [src]="selectedMovie?.photo" [alt]="selectedMovie?.title" class="movie-details-image">
+				  <div class="movie-details">
+					<h2>{{ selectedMovie?.title }}</h2>
+					<p><strong>Genre:</strong> {{ selectedMovie?.genre }}</p>
+					<p><strong>Director:</strong> {{ selectedMovie?.director }}</p>
+					<p><strong>Duration:</strong> {{ selectedMovie?.duration }} min</p>
+					<p><strong>Price:</strong> {{ selectedMovie?.price | currency }}</p>
+					<p><strong>Media Rating:</strong> {{ selectedMovie?.mediaRating }}</p>
+					<h3>Synopsis:</h3>
+					<p>{{ selectedMovie?.synopsis }}</p>
+				  </div>
+				</div>
+			  </section>
+			  <footer>
+				<img src="https://i.imgur.com/i6hvJjx.gif" class="header-image">
+				<br>
+				<img src="https://i.imgur.com/QkBkUkC.gif" alt="">
+			  </footer>
+			</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+  </section>
+  
