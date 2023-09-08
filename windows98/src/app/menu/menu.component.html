@@ -1,1 +1,50 @@
-<p>menu works!</p>
+<footer>
+	<div class="left-position-bar">
+		<button mat-button [matMenuTriggerFor]="menu" class="footerBar-btn">
+			<div class="button-content">
+			<img src="../../assets/icons/png/windows-0.png" alt="windows 98 logo">
+				<span class="start-text">Start</span>
+			</div>
+		</button>
+				  
+	</div>
+
+	<!-- continued part of mat-button ^ -->
+	<mat-menu #menu="matMenu">
+		<button mat-menu-item>
+			<img src="../../assets/icons_new/icon_programs.png" alt="">
+			<p>Programs</p>
+		</button>
+		<button mat-menu-item>
+			<img src="../../assets/icons_new/icon_documents.png" alt="">
+			<p>Documents</p>
+		</button>
+		<button mat-menu-item>
+			<img src="../../assets/icons_new/icon_settings.png" alt="">
+			<p>Settings</p>
+		</button>
+		<button mat-menu-item>
+			<img src="../../assets/icons_new/icon_find.png" alt="">
+			<p>Find</p>
+		</button>
+		<button mat-menu-item>
+			<img src="../../assets/icons_new/icon_programs.png" alt="">
+			<p>Help</p>
+		</button>
+		<button mat-menu-item>
+			<img src="../../assets/icons_new/icons_help.png" alt="">
+			<p>Run</p>
+		</button>
+
+		<div class="line"></div>
+
+		<button mat-menu-item>
+			<img src="../../assets/icons_new/icon_shut.png" alt="">
+			<p>Shut Down</p>
+		</button>
+	</mat-menu>
+	  
+	<button class="footerClock-btn lright">
+		<div id="clock">{{ timeString }}</div>
+	</button>
+</footer>
