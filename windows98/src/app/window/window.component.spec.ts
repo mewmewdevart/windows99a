@@ -6,12 +6,10 @@ describe('WindowComponent', () => {
   let component: WindowComponent;
   let fixture: ComponentFixture<WindowComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ WindowComponent ]
-    })
-    .compileComponents();
-
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [WindowComponent]
+    });
     fixture = TestBed.createComponent(WindowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

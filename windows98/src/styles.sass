@@ -1,53 +1,32 @@
 @import './app/css-reset'
 
-@font-face 
-	font-family: 'w95fa'
+@font-face
+	font-family: 'W95FA'
 	src: url('./assets/fonts/W95FA/w95fa.woff') format('woff')
 
-@font-face
-	font-family: 'w95fa'
-	src: url('./assets/fonts/W95FA/w95fa.woff2') format('woff2')
+$colorBrandGreen: #008282
+$colorBrandGray: #C3C3C3
 
-@font-face 
-	font-family: 'W95FA'
-	src: url('./assets/fonts/W95FA/W95FA.otf') format('opentype')
+$colorMonoWhite: #FFFFFF
+$colorMonoBlack: #000000
+$colorMono100: #C3C3C3
+$colorMono200: #A0A0A0
+$colorMono300: #8E8E8E
+$colorBlue200: #02007F
+$colorGreen: #008282
+$colorMono50: #E3E3E3
+$colorBlue100: #000EA3
+$colorBlue50: #001CF5
+$colorRed100: #EB3323
+$colorRed200: #9C2054
+$colorGreen100: #26B50F
+$colorYellow100: #FFFF2A
 
-	
-$color_brandGreen: #008282
-$color_brandGray: #C3C3C3
+$fontPrincipal: 'w95fa', sans-serif 
+$fontSizeMedium: 24px
+$fontSizeBigger: 26px
+$fontSizeBiggerXX: 28px
 
-$color_mono_white: #FFFFFF
-$color_mono_black: #000000
-$color_mono100: #C3C3C3
-$color_mono200: #A0A0A0
-$color_mono300: #8E8E8E
-$color_blue200: #02007F
-$color_green: #008282
-$color_mono50: #E3E3E3
-$color_blue100: #000EA3
-$color_blue50: #001CF5
-$color_red100: #EB3323
-$color_red200: #9C2054
-$color_green100: #26B50F
-$color_yellow100: #ffff2a
-
-
-$font_principal: 'w95fa', sans-serif
-$font_sizeSmall: 18px
-$font_sizeMedium: 22px
-$font_sizeBigger: 24px
-$font_sizeBiggerXX: 28px
-
-
-// Trying aplicate the global style of font
-body, app-root
-	font-family: $font_principal !important
-*
-	font-family: $font_principal
-
-::ng-deep .mat-typography
-	font-family: $font_principal !important
-
-.global-text
-	font-size: $font_sizeMedium
-	color: $color_mono_black
+body
+	font-family: $fontPrincipal
+	background-color: $colorBrandGreen
