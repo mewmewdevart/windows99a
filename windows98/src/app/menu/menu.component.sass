@@ -1,6 +1,5 @@
 @import '../../styles'
 
-
 footer
 	display: flex
 	justify-content: space-between
@@ -10,6 +9,7 @@ footer
 	position: fixed
 	left: 0
 	bottom: 0
+	font-family: $fontPrincipal
 	width: 100%
 	box-shadow: 2px 2px 0px 0px #F0F0F0 inset
 	z-index: 6
@@ -17,6 +17,7 @@ footer
 		display: flex
 		align-content: flex-start
 		.footerBar-btn
+			font-family: $fontPrincipal
 			background-color: $colorMono100
 			border-radius: 0
 			border: 0 2px 2px 0 solid #262626
@@ -72,6 +73,7 @@ footer
 		padding: 7px
 		justify-content: flex-end
 		align-items: center
+		font-family: $fontPrincipal
 		gap: 10px
 		border: none
 		box-shadow: 2px 2px 0px 0px #7E7E7E inset, -2px -2px 0px 0px #F0F0F0 inset
@@ -95,19 +97,29 @@ footer
 	box-shadow: none
 	&:hover
 		background-color: $colorBlue100
+		.icon-svg
+			filter: invert(100%)
 	&:focus
 		outline: none
 		font-family: $fontPrincipal
 	img
 		display: inline-block
-		width: 56px
-		height: 56px
+		width: 46px
+		height: 46px
 	p
-		color: $colorMonoBlack
+		position: absolute
 		display: inline-block
+		color: $colorMonoBlack
 		padding-left: 14px
+		top: -5px
 		font-size: $fontSizeMedium
 		font-family: $fontPrincipal
+	.icon-svg
+		position: absolute
+		width: 16px
+		height: 16px
+		top: 20px
+		right: 10px
 
 .line
 	background-color: $colorMono300
@@ -119,3 +131,4 @@ footer
 	padding: 0 !important
 	border: none !important
 	border-radius: 0 !important
+

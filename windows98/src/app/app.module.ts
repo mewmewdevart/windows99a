@@ -16,12 +16,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { WindowComponent } from './window/window.component';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		MenuComponent,
-		WindowComponent
+		WindowComponent,
+  IconComponent
 	],
 	imports: [
 		BrowserModule,

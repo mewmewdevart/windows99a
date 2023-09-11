@@ -11,40 +11,23 @@
 
 	<!-- continued part of mat-button ^ -->
 	<mat-menu #menu="matMenu">
-		<button mat-menu-item>
-			<img src="../../assets/icons_new/icon_programs.png" alt="">
-			<p>Programs</p>
+		<button mat-menu-item *ngFor="let icons of programsOfMenu">
+			<img src="{{ icons.icon }}" alt="icon {{ icons.name }}">
+			<p>{{ icons.name }}</p>
+			<img *ngIf="icons.name === 'Programs'" src="../../assets/arrow.svg" alt="svg {{icons.name}}" class="icon-svg">
 		</button>
-		<button mat-menu-item>
-			<img src="../../assets/icons_new/icon_documents.png" alt="">
-			<p>Documents</p>
-		</button>
-		<button mat-menu-item>
-			<img src="../../assets/icons_new/icon_settings.png" alt="">
-			<p>Settings</p>
-		</button>
-		<button mat-menu-item>
-			<img src="../../assets/icons_new/icon_find.png" alt="">
-			<p>Find</p>
-		</button>
-		<button mat-menu-item>
-			<img src="../../assets/icons_new/icon_programs.png" alt="">
-			<p>Help</p>
-		</button>
-		<button mat-menu-item>
-			<img src="../../assets/icons_new/icons_help.png" alt="">
-			<p>Run</p>
-		</button>
+		
 
 		<div class="line"></div>
 
 		<button mat-menu-item>
-			<img src="../../assets/icons_new/icon_shut.png" alt="">
+			<img src="../../assets/icons_new/icon_shut.png" alt="icon shutdown">
 			<p>Shut Down</p>
 		</button>
 	</mat-menu>
 	  
 	<button class="footerClock-btn lright">
+		<img src="../../assets/icons_new/icon_sound.svg" alt="icon clock">
 		<div id="clock">{{ timeString }}</div>
 	</button>
 </footer>

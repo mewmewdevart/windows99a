@@ -6,7 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent {
-  timeString: string = ''; 
+  timeString: string = '';
+
+  constructor() {
+    this.updateClock();
+    setInterval(() => {
+      this.updateClock();
+    }, 1000);
+  }
 
   updateClock() {
     const now = new Date();
@@ -24,4 +31,14 @@ export class MenuComponent {
 
     this.timeString = `${formattedHours}:${formattedMinutes} ${formatHourClock}`;
   }
+
+  programsOfMenu: any[] = [
+    { name: 'Programs', icon: '../../assets/icons_new/icon_programs.png' },
+    { name: 'Documents', icon: '../../assets/icons_new/icon_documents.png' },
+    { name: 'Settings', icon: '../../assets/icons_new/icon_settings.png' },
+    { name: 'Find', icon: '../../assets/icons_new/icon_find.png' },
+    { name: 'Help', icon: '../../assets/icons_new/icon_programs.png' },
+    { name: 'Run', icon: '../../assets/icons_new/icons_help.png' },
+  ];
+
 }
