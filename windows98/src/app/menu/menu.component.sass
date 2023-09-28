@@ -84,6 +84,33 @@ footer
 			align-items: center
 		div
 			font-size: $fontSizeMedium
+
+.footerBarHorizontal-btn
+	font-family: $fontPrincipal
+	background-color: $colorMono100
+	border-radius: 0
+	border: 0 2px 2px 0 solid #262626
+	box-shadow: 4px 4px 0px 0px #B1B1B1 inset, -4px -4px 0px 0px #7E7E7E inset, 2px 2px 0px 0px #F0F0F0 inset, -2px -2px 0px 0px #262626 inset
+	display: flex
+	width: 200px
+	height: 50px
+	padding: 9px 12px
+	align-items: center
+	margin-left: 8px
+	font-size: calc($fontSizeMedium - 3px)
+	.button-content
+		display: flex
+		align-items: center
+	span
+		margin-left: 5px
+	img
+		width: 32px
+		height: 32px
+		justify-content: center
+		align-items: center
+	&:hover
+		box-shadow: -4px -4px 0px 0px #B1B1B1 inset, 4px 4px 0px 0px #7E7E7E inset, -2px -2px 0px 0px #F0F0F0 inset, 2px 2px 0px 0px #262626 inset
+
 .mat-mdc-menu-item
 	background-color: $colorMono100
 	display: flex
@@ -97,8 +124,6 @@ footer
 	box-shadow: none
 	&:hover
 		background-color: $colorBlue100
-		.icon-svg
-			filter: invert(100%)
 	&:focus
 		outline: none
 		font-family: $fontPrincipal
@@ -132,3 +157,20 @@ footer
 	border: none !important
 	border-radius: 0 !important
 
+
+.hiddenItem
+	img
+		width: 32px
+		height: 32px
+	p
+		position: absolute
+		top: -10px
+
+.mat-mdc-menu-item-highlighted
+	background-color: red
+
+.mat-mdc-menu-item:not([disabled]).cdk-program-focused, .mat-mdc-menu-item:not([disabled]).cdk-keyboard-focused, .mat-mdc-menu-item:not([disabled]).mat-mdc-menu-item-highlighted, .mat-mdc-menu-item:not([disabled]):hover
+	background-color: $colorBlue100
+	p
+		color: $colorMonoWhite
+	--mat-menu-item-icon-color: white

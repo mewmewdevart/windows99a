@@ -17,13 +17,15 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { WindowComponent } from './window/window.component';
 import { IconComponent } from './icon/icon.component';
+import { DraggableDirective } from './window/draggable.directive';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		MenuComponent,
 		WindowComponent,
-  IconComponent
+  		IconComponent,
+		DraggableDirective
 	],
 	imports: [
 		BrowserModule,
