@@ -1,6 +1,7 @@
 <div align="center">
-  <img src="https://github.com/mewmewdevart/Templates/assets/50052600/0bf22303-4eee-49d8-a5d4-b1db6cead492" width="100" height="100">
+  <img src="https://github.com/mewmewdevart/windows98/assets/50052600/4bb14155-89cc-4d00-bfa2-2043e9b67fc8" width="100" height="100">
 </div>
+
 <h1 align="center">
  windows98 (Em Desenvolvimento)
 </h1>
